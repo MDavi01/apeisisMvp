@@ -84,7 +84,7 @@ body {
     font-weight: bold;
 }
 
-/* Área de Conteúdo Principal  */
+/* Área de Conteúdo Principal ---*/
 .conteudo-principal {
     margin-left: 250px; 
     padding: 2rem;
@@ -286,15 +286,17 @@ body {
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     }
 
+
+/* --- Estilos do Mapa (mapa.html) --- */
 .grid-mapa {
     display: grid;
-    
+    /* Cria 3 colunas de tamanho igual */
     grid-template-columns: repeat(3, 1fr); 
     gap: 1rem;
     background-color: var(--cor-principal);
     padding: 1.5rem;
     border-radius: 8px;
-    min-height: 70vh;
+    min-height: 70vh; /* Aumentei um pouco a altura para ficar mais espaçado */
 }
 
 .sala {
@@ -315,11 +317,12 @@ body {
     color: var(--cor-texto-cinza);
 }
 
-
+/* NOVO: Estilo para o card do professor dentro do mapa */
 .cartao-professor-mapa { 
     text-align: center; 
 }
 
+/* O avatar dentro do card do mapa */
 .cartao-professor-mapa .avatar {
     width: 60px; 
     height: 60px; 
@@ -327,6 +330,7 @@ body {
     margin-bottom: 0.5rem; 
 }
 
+    
 
     .info-aula, .lista-disponiveis .professor, .card-com-acoes {
         flex-direction: column;
