@@ -19,3 +19,21 @@ body {
     /* 'display: flex' é o que coloca a barra lateral e o conteúdo lado a lado */
     display: flex;
 }
+
+/* --- Barra Lateral Fixa --- */
+.barra-lateral {
+    width: 250px;                  /* Largura fixa */
+    height: 100vh;                 /* 100% da altura da tela */
+    background-color: var(--cor-principal);
+    padding: 2rem 1.5rem;
+    box-sizing: border-box;        /* O padding não "empurra" a largura */
+    display: flex;
+    flex-direction: column;        /* Itens um embaixo do outro */
+    position: fixed;               /* Fica fixa na tela mesmo com rolagem */
+}
+
+/* Cabeçalho da barra lateral */
+.cabecalho-lateral {
+    text-align: center;
+    margin-bottom: 2rem;
+}
