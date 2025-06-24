@@ -84,7 +84,7 @@ body {
     font-weight: bold;
 }
 
-/* --- Área de Conteúdo Principal --- */
+/* Área de Conteúdo Principal  */
 .conteudo-principal {
     margin-left: 250px; 
     padding: 2rem;
@@ -118,7 +118,7 @@ body {
     border-bottom: 2px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Estilo base para os botões */
+
 .botao {
     padding: 0.75rem 1.5rem;
     border: none;
@@ -131,9 +131,9 @@ body {
 }
 
 .botao:hover {
-    opacity: 0.85; /* Efeito de transparência ao passar o mouse */
+    opacity: 0.85; 
 }
-/* Cores específicas dos botões */
+
 .botao-principal { background-color: var(--cor-acao);}
 .botao-falta { background-color: var(--cor-alerta); }
 .botao-whatsapp { background-color: #25D366; }
@@ -152,7 +152,7 @@ body {
     border-bottom: 2px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Estilo base para os botões */
+
 .botao {
     padding: 0.75rem 1.5rem;
     border: none;
@@ -165,10 +165,10 @@ body {
 }
 
 .botao:hover {
-    opacity: 0.85; /* Efeito de transparência ao passar o mouse */
+    opacity: 0.85;
 }
 
-/* Cores específicas dos botões */
+
 .botao-falta { background-color: var(--cor-alerta); }
 .botao-whatsapp { background-color: #25D366; }
 .botao-alocar { background-color: var(--cor-acao); }
@@ -209,7 +209,7 @@ body {
     font-size: 2rem;
     font-weight: bold;
     color: #fff;
-    object-fit: cover; /* Faz a imagem preencher o círculo sem distorcer */
+    object-fit: cover; 
 }
 
 .cartao-professor .nome { font-weight: bold; }
@@ -240,7 +240,7 @@ body {
 .card-com-acoes .avatar.esperado { border: 4px solid var(--cor-aviso); }
 
 .area-acoes {
-    margin-left: auto; /* Joga os botões para a direita */
+    margin-left: auto; 
     display: flex;
     gap: 0.5rem;
 }
@@ -259,8 +259,8 @@ body {
     .barra-lateral {
         width: 100%;
         height: auto;
-        position: static; /* Deixa de ser fixa */
-        flex-direction: row; /* Itens lado a lado */
+        position: static; 
+        flex-direction: row; 
         justify-content: space-between;
         padding: 1rem;
     }
@@ -279,16 +279,54 @@ body {
     }
 
     .grid-indicadores {
-        grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+        grid-template-columns: repeat(2, 1fr); 
     }
 
     .grid-presentes {
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     }
 
-    .grid-mapa {
-        grid-template-columns: 1fr; /* Apenas 1 coluna */
-    }
+.grid-mapa {
+    display: grid;
+    
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 1rem;
+    background-color: var(--cor-principal);
+    padding: 1.5rem;
+    border-radius: 8px;
+    min-height: 70vh;
+}
+
+.sala {
+    border: 2px dashed var(--cor-texto-secundario);
+    border-radius: 8px;
+    padding: 1rem;
+    position: relative; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sala .nome-sala {
+    position: absolute;
+    top: 10px;
+    font-size: 0.8rem;
+    color: var(--cor-texto-cinza);
+}
+
+
+.cartao-professor-mapa { 
+    text-align: center; 
+}
+
+.cartao-professor-mapa .avatar {
+    width: 60px; 
+    height: 60px; 
+    font-size: 1.5rem; 
+    margin-bottom: 0.5rem; 
+}
+
 
     .info-aula, .lista-disponiveis .professor, .card-com-acoes {
         flex-direction: column;
