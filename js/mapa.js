@@ -1,5 +1,5 @@
 
-// espera a página HTML carregar completamente antes de fazer qualquer coisa.
+
 document.addEventListener('DOMContentLoaded', () => {
     
     renderizarMapa();
@@ -8,23 +8,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function renderizarMapa() {
     
-    //  pega o container principal do mapa no HTML pelo seu ID.
-    //    ajuste Trocamos o id para grid-mapa para combinar com nosso HTML revisado.
+    //  pega o container principal do mapa no HTML pelo seu id
+
     const containerDoMapa = document.getElementById('grid-mapa');
 
 
     if (!containerDoMapa) return;
 
-    //  limpa qualquer conteúdo que já estivesse dentro do container.
+    //  limpa qualquer conteúdo que já estivesse dentro do container
   
     containerDoMapa.innerHTML = '';
-    //   O .forEach' é como dizer: para cada sala na lista, faça o seguinte.
+    //   O .forEach' é como dizer para cada sala na lista, faça o seguinte
     dadosMapa.salas.forEach(sala => {
         
-        //   e a sala estiver vazia, essa variável não muda.
         let htmlDoOcupante = '';
 
-        // verificamos se a propriedade 'ocupante' da sala tem algum valor.
+        // verifica se a propriedade 'ocupante' da sala tem algum valor
         if (sala.ocupante) {
             
             //  se tem um ocupante, usamos o .find para procurar na lista completa
@@ -48,7 +47,7 @@ function renderizarMapa() {
                 ${htmlDoOcupante} 
             </div>
         `;
-        //     se a sala estiver ocupada, o card do professor aparecerá. se estiver vazia, nada aparecerá.
+        //    se a sala estiver ocupada, o card do professor aparecerá. se estiver vazia, nada aparecerá.
         containerDoMapa.innerHTML += htmlDaSala;
     });
 }
