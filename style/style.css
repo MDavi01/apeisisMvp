@@ -133,6 +133,7 @@ body {
     opacity: 0.85; /* Efeito de transparência ao passar o mouse */
 }
 /* Cores específicas dos botões */
+.botao-principal { background-color: var(--cor-acao);}
 .botao-falta { background-color: var(--cor-alerta); }
 .botao-whatsapp { background-color: #25D366; }
 .botao-alocar { background-color: var(--cor-acao); }
