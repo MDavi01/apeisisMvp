@@ -170,3 +170,82 @@ body {
 .botao-falta { background-color: var(--cor-alerta); }
 .botao-whatsapp { background-color: #25D366; }
 .botao-alocar { background-color: var(--cor-acao); }
+ 
+.grid-indicadores {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+    gap: 1.5rem;
+}
+
+.indicador {
+    background-color: var(--cor-principal);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+.indicador h3 { margin: 0 0 0.5rem 0; font-size: 1rem; color: var(--cor-texto-cinza); }
+.indicador p { margin: 0; font-size: 2rem; font-weight: bold; }
+
+.grid-presentes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+}
+
+.cartao-professor {
+    text-align: center;
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 0.5rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    object-fit: cover; /* Faz a imagem preencher o círculo sem distorcer */
+}
+
+.cartao-professor .nome { font-weight: bold; }
+.cartao-professor .info { font-size: 0.9rem; color: var(--cor-texto-cinza); }
+.cartao-professor .ponto {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+.ponto.ok { background-color: var(--cor-sucesso); }
+.ponto.atrasado { background-color: var(--cor-alerta); }
+
+.card-com-acoes {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: var(--cor-principal);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.card-com-acoes .avatar.ausente { border: 4px solid var(--cor-alerta); }
+.card-com-acoes .avatar.esperado { border: 4px solid var(--cor-aviso); }
+
+.area-acoes {
+    margin-left: auto; /* Joga os botões para a direita */
+    display: flex;
+    gap: 0.5rem;
+}
+
+.info.aula {
+    font-weight: bold;
+    color: #c4c4c4;
+    margin-top: 4px;
+}
+
