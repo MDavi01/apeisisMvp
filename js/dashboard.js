@@ -47,7 +47,8 @@ function renderizarIndicadores(container, presentes, ausentes) {
         <div class="indicador"><h3>Turmas sem Professor</h3><p>${ausentes.length}</p></div>
         <div class="indicador"><h3>Professores Disponíveis</h3><p>5</p></div>
     `;
-}
+
+''}
 
 function renderizarSecaoPresentes(container, lista) {
     if (!container) return;
@@ -86,5 +87,32 @@ function renderizarSecaoAusentes(container, lista) {
     });
     container.innerHTML = html;
 }
+
+function renderizarSecaoProximos(container, lista) {
+    if (!container) return;
+    let html = '<h2>Próximos Registros</h2>';
+    lista.forEach(prof => {
+        let botaoAlocarHTML = '';
+        if (prof.podeSubstituir) {
+            botaoAlocarHTML = `<button class="botao botao-alocar" onclick="alert('Alocando ${prof.nome}')">Alocar</button>`;
+        }
+        html += `
+            <div class="card-com-acoes">
+                <div class="avatar esperado" style="background-color: #${Math.floor(Math.random()*16777215).toString(16)}">${prof.iniciais}</div>
+                <div class="info">
+                    <p class="nome">${prof.nome}</p>
+                    <p class="info aula">${prof.disciplina} - ${prof.horarioAula}</p>
+                </div>
+                <div class="area-acoes">
+                    ${botaoAlocarHTML}
+                    <button class="botao botao-whatsapp" onclick="alert('Notificando ${prof.nome} no WhatsApp')">WhatsApp</button>
+                </div>
+            </div>
+        `;
+    });
+    container.innerHTML = html;
+}
+
+
 
 
