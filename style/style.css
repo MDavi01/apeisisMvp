@@ -1,0 +1,21 @@
+*/
+:root {
+    --cor-principal: #1e4620;
+    --cor-fundo: #052908;
+    --cor-texto-branco: #ffffff;
+    --cor-texto-cinza: #b3b3b3;
+    --cor-sucesso: #28a745;
+    --cor-alerta: #dc3545;
+    --cor-acao: #0d6efd;
+    --cor-aviso: #ffc107;
+}
+
+/* Estilo base para a página inteira */
+body {
+    font-family: Arial, sans-serif; /* Fonte padrão e segura */
+    margin: 0;                     /* Remove margens padrão do navegador */
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-branco);
+    /* 'display: flex' é o que coloca a barra lateral e o conteúdo lado a lado */
+    display: flex;
+}
