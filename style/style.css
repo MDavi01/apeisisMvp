@@ -248,4 +248,55 @@ body {
     color: #c4c4c4;
     margin-top: 4px;
 }
+@media (max-width: 768px) {
+    
+    body {
+        flex-direction: column; 
+    }
+
+    .barra-lateral {
+        width: 100%;
+        height: auto;
+        position: static; /* Deixa de ser fixa */
+        flex-direction: row; /* Itens lado a lado */
+        justify-content: space-between;
+        padding: 1rem;
+    }
+
+
+    .cabecalho-lateral .logo-APEISIS, .cabecalho-lateral p { 
+        display: none; 
+    }
+    .menu-lateral { display: flex; gap: 0.5rem; }
+    .menu-lateral li a { padding: 0.5rem; }
+
+    .conteudo-principal {
+        margin-left: 0; 
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .grid-indicadores {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+    }
+
+    .grid-presentes {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .grid-mapa {
+        grid-template-columns: 1fr; /* Apenas 1 coluna */
+    }
+
+    .info-aula, .lista-disponiveis .professor, .card-com-acoes {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .area-acoes {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+}
 
