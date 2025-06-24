@@ -38,3 +38,68 @@ body {
     text-align: center;
     margin-bottom: 2rem;
 }
+.logo-APEISIS {
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    border-radius: 50%;            /* Deixa o logo redondo */
+    margin: 0 auto 1rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: var(--cor-principal);
+    font-size: 2rem;
+}
+
+.cabecalho-lateral h2 { margin: 0; }
+.cabecalho-lateral p { margin: 0; color: var(--cor-texto-cinza); }
+
+/* Menu de Navegação */
+.menu-lateral {
+    list-style: none; 
+    padding: 0;
+    flex-grow: 1;     /* Faz o menu ocupar o espaço que sobrar na vertical */
+}
+
+.menu-lateral li a {
+    display: block;   
+    color: var(--cor-texto-cinza);
+    text-decoration: none; 
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    transition: background-color 0.2s; /* Animação suave */
+}
+
+.menu-lateral li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--cor-texto-branco);
+}
+
+/* Estilo do link da página ATUAL */
+.menu-lateral li a.ativo {
+    background-color: #fff;
+    color: var(--cor-principal);
+    font-weight: bold;
+}
+
+/* --- Área de Conteúdo Principal --- */
+.conteudo-principal {
+    margin-left: 250px; 
+    padding: 2rem;
+    width: calc(100% - 250px);
+    box-sizing: border-box;
+}
+
+.cabecalho-pagina {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Joga um item para cada lado */
+    margin-bottom: 2rem;
+}
+.cabecalho-pagina h1 { margin-top: 0; }
+
+.area-botoes {
+    margin-bottom: 2rem;
+}
