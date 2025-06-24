@@ -103,3 +103,37 @@ body {
 .area-botoes {
     margin-bottom: 2rem;
 }
+.secao-conteudo {
+    background-color: var(--cor-principal);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.secao-conteudo h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Estilo base para os botões */
+.botao {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: white;
+    transition: opacity 0.2s;
+}
+
+.botao:hover {
+    opacity: 0.85; /* Efeito de transparência ao passar o mouse */
+}
+
+/* Cores específicas dos botões */
+.botao-falta { background-color: var(--cor-alerta); }
+.botao-whatsapp { background-color: #25D366; }
+.botao-alocar { background-color: var(--cor-acao); }
