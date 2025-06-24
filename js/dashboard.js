@@ -112,6 +112,37 @@ function renderizarSecaoProximos(container, lista) {
     });
     container.innerHTML = html;
 }
+function configurarBotaoSimulacao() {
+    const botao = document.getElementById('botao-simular');
+    if (!botao) return;
+
+
+   
+    botao.addEventListener('click', () => {
+        // Verifica se ainda existem novas entradas para simular
+        if (novasEntradasSimuladas.length > 0) {
+            // '.shift()' pega o PRIMEIRO item da lista de simulação e o remove de lá.
+            const novaEntrada = novasEntradasSimuladas.shift();
+           
+           
+            professores.push(novaEntrada);
+           
+           
+            renderizarTudoNoDashboard();
+
+
+            // Desativa o botão se não houver mais simulações
+            if (novasEntradasSimuladas.length === 0) {
+                botao.disabled = true;
+                botao.textContent = "Nenhuma nova entrada";
+                botao.style.cursor = "not-allowed";
+                botao.style.opacity = "0.6";
+            }
+
+
+        }
+    });
+}
 
 
 
